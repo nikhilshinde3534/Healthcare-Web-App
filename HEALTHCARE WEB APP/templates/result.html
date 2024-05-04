@@ -1,0 +1,14 @@
+{% extends "header.html"%}{% block title %}Predicted Result{%endblock %}
+
+{% block content %} 
+
+
+<body class="result-header">
+    
+    <section class="prediction-text"> 
+    <h1>{{ prediction_text }}</h1>
+
+    <button class="result-button" type="button"> <a href="/"> Back </a></button>
+
+    </section>
+{% endblock %}

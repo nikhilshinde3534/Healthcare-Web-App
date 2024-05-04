@@ -1,0 +1,89 @@
+{% extends "header.html"%}{% block title %}Liver Prediction{%endblock %} {% block content %}
+
+<section class="form-section">
+
+    <section class="form-title">
+        Liver Disease Prediction
+    </section>
+
+    <form action="{{ url_for('liver_predict')}}" method="post">
+
+        <section class="form-content">
+
+            <div class="input-box">
+                <span class="label">Age</span>
+                <input class="form-data" type="number" id="Age" name="Age" required="required" placeholder="Age">
+
+            </div>
+
+            <div class="input-box">
+                <label class="label">Gender</label> <br>
+                <select class="select-box" id="Gender" name="Gender" required="required" placeholder="Gender">
+          <option value="#">Select</option>
+          <option value="0"> Female</option>
+          <option value="1"> Male </option>
+        </select>
+
+            </div>
+            <div class="input-box">
+                <label class="label">Total Bilirubin</label>
+                <input class="form-data" type="number" step="any" id="Total_Bilirubin" name="Total_Bilirubin" required="required" placeholder="Total Bilirubin">
+            </div>
+
+
+            <div class="input-box">
+                <span class="label">Direct Bilirubin</span>
+                <input class="form-data" type="number" step="any" id="Direct_Bilirubin" name="Direct_Bilirubin" required="required" placeholder="Direct Bilirubin">
+            </div>
+
+            <div class="input-box">
+                <span class="label">Alkaline Phosphotase</span>
+                <input class="form-data" type="number" step="any" id="Alkaline_Phosphotase" name="Alkaline_Phosphotase" required="required" placeholder="Alkaline Phosphotase">
+            </div>
+
+
+            <div class="input-box">
+                <span class="label">Alamine Aminotransferase</span>
+                <input class="form-data" type="number" step="any" id="Alamine_Aminotransferase" name="Alamine_Aminotransferase" required="required" placeholder="Alamine Aminotransferase">
+            </div>
+
+            <div class="input-box">
+                <span class="label">Aspartate Aminotransferase</span>
+                <input class="form-data" type="number" step="any" id="Aspartate_Aminotransferase" name="Aspartate_Aminotransferase" required="required" placeholder="Aspartate Aminotransferase">
+            </div>
+
+
+            <div class="input-box">
+                <span class="label">Total Protiens</span>
+                <input class="form-data" type="number" step="any" id="Total_Protiens" name="Total_Protiens" required="required" placeholder="Total Protiens">
+            </div>
+
+            <div class="input-box">
+                <span class="label">Albumin</span>
+                <input class="form-data" type="number" step="any" id="Albumin" name="Albumin" required="required" placeholder="Enter the Albumin">
+            </div>
+
+            <div class="input-box">
+                <span class="label">Albumin and Globulin Ratio</span>
+                <input class="form-data" type="number" step="any" id="Albumin_and_Globulin_Ratio" name="Albumin_and_Globulin_Ratio" required="required" placeholder="Enter the Albumin and Globulin Ratio">
+            </div>
+
+        </section>
+
+        <div class="button">
+            <input type="submit" value="Predict">
+        </div>
+
+    </form>
+
+    <div class="error-message">
+        <h4>{{error_message}}</h3>
+    </div>
+
+</section>
+
+
+
+
+
+{% endblock %}

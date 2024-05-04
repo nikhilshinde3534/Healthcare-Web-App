@@ -1,0 +1,189 @@
+{% extends "header.html"%}{% block title %}Cancer Prediction{%endblock %} {% block content %}
+
+<section class="form-section">
+
+    <section class="form-title">
+        Breast Cancer Prediction
+    </section>
+
+    <form action="{{ url_for('cancer_predict')}}" method="post">
+
+        <section class="form-content">
+
+            <div class="input-box">
+                <label class="label">Mean Radius</label>
+                <input class="form-data" type="number" step="any" id="radius_mean" name="radius_mean" required="required" placeholder="Mean Radius">
+            </div>
+
+            <div class="input-box">
+                <label class="label">Mean Texture</label>
+                <input class="form-data" type="number" step="any" id="texture_mean" name="texture_mean" required="required" placeholder="Mean Texture">
+            </div>
+
+
+            <div class="input-box">
+                <label class="label">Mean Perimeter</label>
+                <input class="form-data" type="number" step="any" id="perimeter_mean" name="perimeter_mean" required="required" placeholder="Mean Perimeter">
+
+            </div>
+
+            <div class="input-box">
+                <label class="label">Mean Area</label>
+                <input class="form-data" type="number" step="any" id="area_mean" name="area_mean" required="required" placeholder="Mean Area">
+            </div>
+
+            <div class="input-box">
+                <label class="label">Mean Smoothness</label>
+                <input class="form-data" type="number" step="any" id="smoothness_mean" name="smoothness_mean" required="required" placeholder="Mean Smoothness">
+            </div>
+
+            <div class="input-box">
+                <label class="label">Mean Compactness</label>
+                <input class="form-data" type="number" step="any" id="compactness_mean" name="compactness_mean" required="required" placeholder="Mean Compactness">
+            </div>
+
+            <div class="input-box">
+                <label class="label">Mean Concavity</label>
+                <input class="form-data" type="number" step="any" id="concavity_mean" name="concavity_mean" required="required" placeholder="Mean Concavity">
+            </div>
+
+            <div class="input-box">
+                <label class="label">Mean Concave Point</label>
+                <input class="form-data" type="number" step="any" id="concave points_mean" name="concave points_mean" required="required" placeholder="Mean Concave Points">
+            </div>
+
+            <div class="input-box">
+                <label class="label">Mean Symmetry</label>
+                <input class="form-data" type="number" step="any" id="symmetry_mean" name="symmetry_mean" required="required" placeholder="Mean Symmetry">
+            </div>
+
+            <div class="input-box">
+                <label class="label">Mean Fractal Dimension</label>
+                <input class="form-data" type="number" step="any" id="fractal_dimension_mean" name="fractal_dimension_mean" required="required" placeholder="Mean Fractal Dimension">
+            </div>
+
+            <div class="input-box">
+                <label class="label">Radius Error</label>
+                <input class="form-data" type="number" step="any" id="radius_se" name="radius_se" required="required" placeholder="Radius Error">
+            </div>
+
+            <div class="input-box">
+                <label class="label">Texture Error</label>
+                <input class="form-data" type="number" step="any" id="texture_se" name="texture_se" required="required" placeholder="Texture Error">
+            </div>
+
+            <div class="input-box">
+                <label class="label">Perimeter Error</label>
+                <input class="form-data" type="number" step="any" id="perimeter_se" name="perimeter_se" required="required" placeholder="Perimeter Error">
+            </div>
+
+            <div class="input-box">
+                <label class="label">Area Error</label>
+                <input class="form-data" type="number" step="any" id="area_se" name="area_se" required="required" placeholder="Area Error">
+            </div>
+
+            <div class="input-box">
+                <label class="label">Smoothness Error</label>
+                <input class="form-data" type="number" step="any" id="smoothness_se" name="smoothness_se" required="required" placeholder="Smoothness Error">
+            </div>
+
+            <div class="input-box">
+                <label class="label">Compactness Error</label>
+                <input class="form-data" type="number" step="any" id="compactness_se" name="compactness_se" required="required" placeholder="Compactness Error">
+            </div>
+
+
+            <div class="input-box">
+                <label class="label">Concavity Error</label>
+                <input class="form-data" type="number" step="any" id="concavity_se" name="concavity_se" required="required" placeholder="Concavity Error">
+            </div>
+
+
+            <div class="input-box">
+                <label class="label">Concave Points Error</label>
+                <input class="form-data" type="number" step="any" id="concave points_se" name="concave points_se" required="required" placeholder="Concave Points Error">
+            </div>
+
+
+            <div class="input-box">
+                <label class="label">Symmetry Error</label>
+                <input class="form-data" type="number" step="any" id="symmetry_se" name="symmetry_se" required="required" placeholder="Symmetry Error">
+            </div>
+
+            <div class="input-box">
+                <label class="label">Fractal Dimension Error</label>
+                <input class="form-data" type="number" step="any" id="fractal_dimension_se" name="fractal_dimension_se" required="required" placeholder="Fractal Dimension Error">
+            </div>
+
+
+            <div class="input-box">
+                <label class="label">Worst Radius</label>
+                <input class="form-data" type="number" step="any" id="radius_worst" name="radius_worst" required="required" placeholder="Worst Radius">
+            </div>
+
+
+            <div class="input-box">
+                <label class="label">Worst Texture</label>
+                <input class="form-data" type="number" step="any" id="texture_worst" name="texture_worst" required="required" placeholder="Worst Texture">
+
+            </div>
+
+
+            <div class="input-box">
+                <label class="label">Worst Perimeter</label>
+                <input class="form-data" type="number" step="any" id="perimeter_worst" name="perimeter_worst" required="required" placeholder="Worst Perimeter">
+            </div>
+
+
+            <div class="input-box">
+                <label class="label">Worst Area</label>
+                <input class="form-data" type="number" step="any" id="area_worst" name="area_worst" required="required" placeholder="Worst Area">
+            </div>
+
+
+            <div class="input-box">
+                <label class="label">Worst Smoothness</label>
+                <input class="form-data" type="number" step="any" id="smoothness_worst" name="smoothness_worst" required="required" placeholder="Worst Smoothness">
+            </div>
+
+
+            <div class="input-box">
+                <label class="label">Worst Compactness</label>
+                <input class="form-data" type="number" step="any" id="compactness_worst" name="compactness_worst" required="required" placeholder="Worst Compactness">
+            </div>
+
+
+            <div class="input-box">
+                <label class="label">Worst Concavity</label>
+                <input class="form-data" type="number" step="any" id="concavity_worst" name="concavity_worst" required="required" placeholder="Worst Concavity">
+            </div>
+
+            <div class="input-box">
+                <label class="label">Worst Concave Points</label>
+                <input class="form-data" type="number" step="any" id="concave points_worst" name="concave points_worst" required="required" placeholder="Worst Concave Points">
+            </div>
+
+
+            <div class="input-box">
+                <label class="label">Worst Symmetry</label>
+                <input class="form-data" type="number" step="any" id="symmetry_worst" name="symmetry_worst" required="required" placeholder="Worst Symmetry">
+            </div>
+
+
+            <div class="input-box">
+                <label class="label">Worst Fractal Dimension</label>
+                <input class="form-data" type="number" step="any" id="fractal_dimension_worst" name="fractal_dimension_worst" required="required" placeholder="Worst Fractal Dimension">
+            </div>
+
+        </section>
+
+        <div class="button">
+            <input type="submit" value="Predict">
+        </div>
+
+    </form>
+
+</section>
+
+
+{% endblock %}

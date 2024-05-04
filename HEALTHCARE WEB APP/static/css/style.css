@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Home Page */
+
+.home-content {
+    margin: 5%;
+}
+
+.home-title {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.discription {
+    color: #fff;
+    padding: 25px;
+    text-align: center;
+}
+
+.span-tg {
+    color: rgb(148, 208, 245);
+}
+
+.horizontal-line {
+    margin: 10px 250px 50px 250px;
+    height: 2px;
+    background-color: white;
+}
+
+.disease-list {
+    text-align: center;
+    color: white;
+}
+
+.disease-list li {
+    padding: 8px;
+    list-style-type: none;
+}
+
+.disease-list ul li a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+
+/* Background Image */
+
+.body-bg {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(25, 32, 58, 0.7), rgba(4, 9, 30, 0.7)), url("../img/healthcare.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.header nav h2 {
+    color: white;
+}
+
+.header nav h2 a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Nav Bar */
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li:hover {
+    color: #fff;
+    background-color: rgb(5, 137, 208);
+}
+
+
+/* Hamburger Menu */
+
+.hamburger {
+    top: 10px;
+    visibility: hidden;
+    position: fixed;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.hamburger:before,
+.hamburger:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    right: 0;
+    background: #fff;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.hamburger::before {
+    top: -10px;
+    width: 25px;
+}
+
+.hamburger::after {
+    top: 10px;
+    width: 25px;
+}
+
+.toggle-menu {
+    position: absolute;
+    width: 30px;
+    height: 10px;
+    z-index: 3;
+    cursor: pointer;
+    opacity: 0;
+}
+
+
+/* Text Box */
+
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+
+/* Form Section */
+
+.form-content {
+    margin: 20px 30px 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-inline: 12px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 80%;
+}
+
+.form-content .input-box {
+    width: 30%;
+    padding: 1px 0.7px;
+}
+
+.input-box label {
+    padding: 10px;
+    font-size: 15px;
+    color: #FFF;
+}
+
+.form-title {
+    margin-top: 20px;
+}
+
+.label {
+    text-align: left;
+    color: #fff;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 15px 30px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.select-box {
+    width: 100%;
+    height: 50px;
+    padding: 10px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.button {
+    background: transparent;
+    font-size: 13px;
+    padding: 15px 15px;
+    border: lightseagreen;
+}
+
+input[type='submit']:hover {
+    border: 1px solid #fff;
+    background: rgb(5, 137, 208);
+    transition: 1s;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 30px;
+    color: White;
+    font-style: bold;
+}
+
+
+/*   Prediction Result */
+
+.prediction-text {
+    margin: 10% 20px 0px 70px;
+    color: #fff;
+    text-align: center;
+    padding-top: 45px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+
+/* Result Button */
+
+.result-button {
+    color: ivory;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 50px 70px 20px 50px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: ghostwhite;
+    width: 100px;
+    height: 7vh;
+}
+
+.result-button a {
+    color: rgb(5, 143, 220);
+    text-decoration: none;
+}
+
+input[type=submit] {
+    background-color: whitesmoke;
+    border: solid 2px rgb(75, 143, 220);
+    cursor: pointer;
+    padding: 12px 34px;
+    font-size: 15px;
+    margin: 4px 2px;
+    border-radius: 3px;
+}
+
+.button {
+    margin-left: 45%;
+    display: inline-block;
+}
+
+.error-message {
+    text-align: center;
+    color: whitesmoke;
+}
+
+
+/* Mobile compatibility  992px*/
+
+@media (max-width: 800px) {
+    .home-content {
+        margin: 5% 15% 12% 14%;
+        width: 70%;
+    }
+    .horizontal-line {
+        margin: 10px 250px 50px 250px;
+        height: 2px;
+        background-color: white;
+    }
+    .text-box h1 {
+        font-size: 20px;
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        height: 28vh;
+        width: 20%;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+    .form-section {
+        margin-top: 6%;
+    }
+    .form-content {
+        margin: 2% 0% 0% 15%;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        padding-inline: 12px;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .prediction-text {
+        margin: 45% 8% 0px 10%;
+        text-align: center;
+    }
+    .form-content .input-box {
+        text-align: center;
+        width: 80%;
+        padding: 1px 0.7px;
+    }
+    .form-content label {
+        text-align: left;
+    }
+    .button {
+        margin-left: 30%;
+        display: inline-block;
+    }
+    /* Humberger */
+    .hamburger,
+    .toggle-menu {
+        margin-top: 10px;
+        display: block;
+        visibility: visible;
+    }
+    .menu {
+        margin-top: 0px;
+        flex-direction: column;
+        align-items: center;
+        top: 1;
+        right: -250px;
+        position: fixed;
+        background: #6ab7e7;
+        width: 30%;
+        height: 100%;
+        padding-top: 70px;
+    }
+    .nav-links input:checked~.menu {
+        right: 0;
+    }
+    .menu li a {
+        margin-top: 50px;
+        padding: 20px;
+    }
+    .error-message {
+        text-align: center;
+        color: whitesmoke;
+        padding: 20px;
+    }
+}

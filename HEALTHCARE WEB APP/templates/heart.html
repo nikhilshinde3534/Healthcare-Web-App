@@ -1,0 +1,89 @@
+{% extends "header.html"%}{% block title %}Heart Disease Prediction{%endblock %} {% block content %}
+
+<section class="form-section">
+
+    <section class="form-title">
+        Heart Disease Prediction
+    </section>
+
+
+    <form action="{{ url_for('heart_predict')}}" method="post">
+
+        <section class="form-content">
+
+            <div class="input-box">
+                <span class="label">Chest Pain Type</span> <br>
+                <select class="select-box" id="cp" name="cp" required="required" placeholder="Chest Pain Type">
+            <option value="#">Select</option>
+            <option value="1">Typical Angina</option>
+            <option value="2">Atypical Angina</option>
+            <option value="3">Non-Anginal Pain</option>
+            <option value="0">Asymptomatic</option>
+          </select>
+
+            </div>
+
+
+            <div class="input-box">
+                <span class="label">Resting Blood Pressure (in mm Hg)</span>
+                <input class="form-data" type="number" step="any" id="trestbps" name="trestbps" required="required" placeholder="Resting Blood Pressure">
+            </div>
+
+
+            <div class="input-box">
+                <span class="label">Serum Cholestoral in mg/dl</span>
+                <input class="form-data" type="number" step="any" id="chol" name="chol" required="required" placeholder="Serum Cholestoral">
+            </div>
+
+            <div class="input-box">
+                <span class="label">Fasting Blood Sugar</span> <br>
+                <select class="select-box" id="fbs" name="fbs" required="required" placeholder="Fasting Blood Sugar">
+                    <option value="#">Select</option>
+                    <option value="0">Fasting Blood Sugar < 120 mg/dl</option>
+                    <option value="1">Fasting Blood Sugar > 120 mg/dl</option>
+                </select>
+            </div>
+
+
+
+            <div class="input-box">
+                <span class="label">Resting Electro-cardiographic Result</span>
+                <input class="form-data" type="number" step="any" id="restecg" name="restecg" required="required" placeholder="Resting Electro-cardiographic Result">
+            </div>
+
+
+            <div class="input-box">
+                <span class="label">Maximum Heart Rate Achieved</span>
+                <input class="form-data" type="number" step="any" id="thalach" name="thalach" required="required" placeholder="Maximum Heart Rate Achieved">
+            </div>
+
+
+            <div class="input-box">
+                <span class="label">Exercise Induced Angina</span>
+                <select class="select-box" id="exang" name="exang" required="required">
+                  <option value="#">Select</option>
+                  <option value="1">Yes</option>
+                  <option value="0">No</option>
+                </select>
+            </div>
+
+        </section>
+
+        <div class="button">
+            <input type="submit" value="Predict">
+        </div>
+
+    </form>
+
+    <div class="error-message">
+        <h4>{{error_message}}</h3>
+    </div>
+
+</section>
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "header.html"%}{% block title %}Kidney Disease Prediction{%endblock %} {% block content %}
+
+<section class="form-section">
+
+    <section class="form-title">
+        Kidney Disease Prediction
+    </section>
+
+    <form action="{{ url_for('kidney_predict')}}" method="post">
+
+        <section class="form-content">
+
+            <div class="input-box">
+                <span class="label">Blood Pressure</span> <br>
+                <input class="form-data" type="number" step="any" id="bp" name="Year" required="required" placeholder="Blood Pressure">
+            </div>
+
+            <div class="input-box">
+                <span class="label">Specific Gravity</span>
+                <input class="form-data" type="number" step="any" id="sg" name="sg" required="required" placeholder="Specific Gravity">
+            </div>
+
+
+            <div class="input-box">
+                <span class="label">Albumin</span>
+                <input class="form-data" type="number" step="any" id="al" name="al" required="required" placeholder="Albumin">
+            </div>
+
+            <div class="input-box">
+                <span class="label">Blood Sugar Level</span>
+                <input class="form-data" type="number" step="any" id="su" name="su" required="required" placeholder="Blood Sugar Level">
+            </div>
+
+            <div class="input-box">
+                <span class="label">Red Blood Cells Count</span>
+                <input class="form-data" type="number" step="any" id="rbc" name="rbc" required="required" placeholder="Red Blood Cells Count">
+            </div>
+
+            <div class="input-box">
+                <span class="label">Pus Cell Count</span>
+                <input class="form-data" type="number" step="any" id="pc" name="pc" required="required" placeholder="Pus Cell Count">
+            </div>
+
+            <div class="input-box">
+                <span class="label">Pus Cell Clumps</span>
+                <input class="form-data" type="number" step="any" id="pcc" name="pcc" required="required" placeholder="Pus Cell Clumps">
+            </div>
+
+
+        </section>
+
+        <div class="button">
+            <input type="submit" value="Predict">
+        </div>
+
+
+    </form>
+
+</section>
+
+
+{% endblock %}

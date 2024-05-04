@@ -1,0 +1,73 @@
+{% extends "header.html"%}{% block title %}Diabetes Prediction{%endblock %} {% block content %}
+
+<section class="form-section">
+
+    <section class="form-title">
+        Diabetes Prediction
+    </section>
+
+
+    <form action="{{ url_for('diabetes_predict')}}" method="post">
+
+
+        <section class="form-content">
+
+            <div class="input-box">
+                <span class="label">No. of Pregnencies</span> <br>
+                <input class="form-data" type="number" step="any" id="pregnancies" name="pregnancies" required="required" placeholder="Pregnancies">
+
+            </div>
+
+
+
+            <div class="input-box">
+                <span class="label">Glucose</span>
+                <input class="form-data" type="number" step="any" id="glucose" name="glucose" required="required" placeholder="Glucose level">
+            </div>
+
+
+            <div class="input-box">
+                <span class="label">Blood Pressure</span>
+                <input class="form-data" type="number" step="any" id="blood_pressure" name="blood_pressure" required="required" placeholder="Blood Pressure">
+            </div>
+
+
+            <div class="input-box">
+                <span class="label">Skin Thickness </span>
+                <input class="form-data" type="number" step="any" id="skin_thickness" name="skin_thickness" required="required" placeholder="Skin Thickness">
+            </div>
+
+
+
+            <div class="input-box">
+                <span class="label">Insulin</span>
+                <input class="form-data" type="number" step="any" id="insulin" name="insulin" required="required" placeholder="Insulin">
+            </div>
+
+
+            <div class="input-box">
+                <span class="label">Body Mass Index</span>
+                <input class="form-data" type="number" step="any" id="BMI" name="BMI" required="required" placeholder="BMI">
+            </div>
+
+            <div class="input-box">
+                <span class="label">Diabetes Pedigree Function</span>
+                <input class="form-data" type="number" step="any" id="diabetes_pedigree_function " name="diabetes_pedigree_function" required="required" placeholder="Diabetes Pedigree Function">
+            </div>
+
+            <div class="input-box">
+                <span class="label">Age</span>
+                <input class="form-data" type="number" step="any" id="age" name="age" required="required" placeholder="Age">
+            </div>
+
+        </section>
+
+        <div class="button">
+            <input type="submit" value="Predict">
+        </div>
+    </form>
+
+</section>
+
+
+{% endblock %}
